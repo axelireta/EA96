@@ -8,6 +8,7 @@ float f, c, k;
 
 
 
+
 void celsiusToFahrenheit(){
     printf("Ingresa la temperatura en grados celsius\n");
     scanf("%f", &c);
