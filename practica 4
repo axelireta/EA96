@@ -23,6 +23,9 @@ class Result {
     // Write your code here
     int [] matriz = {1,4,3,2};
     System.out.printf("La matriz es:", matriz[1]);
+
+    for (i=0; j=4; i<j)
+
     }
 
 }
