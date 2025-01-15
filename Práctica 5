@@ -1,0 +1,45 @@
+import java.util.List;
+import java.util.ArrayList;
+
+class Solution {
+    public List<Boolean> kidsWithCandies(List<Integer> candies, int extraCandies) {
+        List<Boolean> result = new ArrayList<>();
+
+        // Encontrar el mayor número de dulces
+        int greatest = 0;
+        for (int i = 0; i < candies.size(); i++) {
+            if (greatest <= candies.get(i)) {
+                greatest = candies.get(i);
+            }
+        }
+
+        // Verificar el niño que tendrá el mayor número de dulces después del extra
+        for (int i = 0; i < candies.size(); i++) {
+            result.add(candies.get(i) + extraCandies >= greatest);
+        }
+
+        return result;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Solution solution = new Solution();
+
+
+        List<Integer> candies = new ArrayList<>();
+        candies.add(2);
+        candies.add(3);
+        candies.add(5);
+        candies.add(1);
+        candies.add(3);
+
+
+        int extraCandies = 3;
+
+
+        List<Boolean> result = solution.kidsWithCandies(candies, extraCandies);
+        System.out.println(result);
+    }
+}
